@@ -32,7 +32,10 @@
     },
     "body": {
       "type": "dynamiczone",
-      "components": []
+      "components": [
+        "primary.basic-text",
+        "primary.pull-quote"
+      ]
     }
   }
 }
