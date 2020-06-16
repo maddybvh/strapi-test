@@ -5,5 +5,9 @@
     "icon": "align-justify"
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "richText": {
+      "type": "richtext"
+    }
+  }
 }

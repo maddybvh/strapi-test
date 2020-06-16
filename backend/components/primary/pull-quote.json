@@ -5,5 +5,13 @@
     "icon": "address-card"
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "quote": {
+      "type": "richtext",
+      "required": true
+    },
+    "attribution": {
+      "type": "string"
+    }
+  }
 }
