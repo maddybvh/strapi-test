@@ -5,12 +5,11 @@ import { Event } from "./Event";
 
 export const App = () => {
   return (
-    <>
-      <div className="App">hello</div>
+    <div className="App">
       <Switch>
         <Route path="/" exact component={Timeline} />
         <Route path="/event/:id" component={Event} />
       </Switch>
-    </>
+    </div>
   );
 };

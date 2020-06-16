@@ -3,7 +3,7 @@ import React from "react";
 export const PullQuote = (props) => {
   return (
     <>
-      <h4>{props.content.quote}</h4>
+      <q>{props.content.quote}</q>
       <div>– {props.content.attribution} </div>
     </>
   );
