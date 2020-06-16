@@ -14,7 +14,6 @@ export const Event = (props) => {
     }
 
     const newEvent = await response.json();
-    console.log(newEvent);
     setLoading(false);
     setEvent(newEvent);
   };
@@ -32,6 +31,7 @@ export const Event = (props) => {
       <div>
         From {event.startDate} to {event.endDate}
       </div>
+
       {event.body &&
         event.body.map((component) => {
           return <div key={component._id}>{component.__component}</div>;
