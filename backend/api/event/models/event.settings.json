@@ -14,17 +14,19 @@
       "required": true
     },
     "startDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "endDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "heroImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
