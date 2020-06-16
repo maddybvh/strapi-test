@@ -1,5 +1,10 @@
 import React from "react";
 
 export const PullQuote = (props) => {
-  return <div>This is pull quote component</div>;
+  return (
+    <>
+      <h4>{props.content.quote}</h4>
+      <div>– {props.content.attribution} </div>
+    </>
+  );
 };

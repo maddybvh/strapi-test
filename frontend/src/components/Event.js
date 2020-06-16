@@ -36,19 +36,17 @@ export const Event = (props) => {
 
       {event.body &&
         event.body.map((component) => {
-          return (
-            <div key={component._id}>{getComponent(component.__component)}</div>
-          );
+          return <div key={component._id}>{getComponent(component)}</div>;
         })}
     </>
   );
 };
 
-const getComponent = (name) => {
-  switch (name) {
+const getComponent = (component) => {
+  switch (component.__component) {
     case "primary.basic-text":
-      return <BasicText />;
+      return <BasicText content={component} />;
     case "primary.pull-quote":
-      return <PullQuote />;
+      return <PullQuote content={component} />;
   }
 };
