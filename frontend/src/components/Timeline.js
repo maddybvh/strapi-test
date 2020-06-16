@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export const Events = () => {
+export const Timeline = () => {
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState([]);
 
@@ -23,12 +24,14 @@ export const Events = () => {
     <div>... loading</div>
   ) : (
     <div>
-      <h1>Events</h1>
+      <h1>Timeline</h1>
       {events.map((event) => {
         return (
-          <div key={event.id}>
-            <h3>{event.title}</h3>
-          </div>
+          <article key={event._id}>
+            <Link to={`/event/${event.id}`}>
+              <h3>{event.title}</h3>
+            </Link>
+          </article>
         );
       })}
     </div>
