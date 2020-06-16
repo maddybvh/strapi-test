@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BasicText } from "./BasicText";
+import { PullQuote } from "./PullQuote";
 
 export const Event = (props) => {
   const [loading, setLoading] = useState(true);
@@ -34,8 +36,19 @@ export const Event = (props) => {
 
       {event.body &&
         event.body.map((component) => {
-          return <div key={component._id}>{component.__component}</div>;
+          return (
+            <div key={component._id}>{getComponent(component.__component)}</div>
+          );
         })}
     </>
   );
+};
+
+const getComponent = (name) => {
+  switch (name) {
+    case "primary.basic-text":
+      return <BasicText />;
+    case "primary.pull-quote":
+      return <PullQuote />;
+  }
 };
