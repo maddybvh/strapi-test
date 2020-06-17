@@ -38,6 +38,13 @@
         "primary.basic-text",
         "primary.pull-quote"
       ]
+    },
+    "location": {
+      "model": "location"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

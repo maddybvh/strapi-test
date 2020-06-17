@@ -28,7 +28,8 @@ export const Timeline = () => {
       {events.map((event) => {
         return (
           <article key={event._id}>
-            <Link to={`/event/${event.id}`}>
+            <label>{event.location.location}</label>
+            <Link to={`/events/${event.slug}`}>
               <h3>{event.title}</h3>
             </Link>
           </article>

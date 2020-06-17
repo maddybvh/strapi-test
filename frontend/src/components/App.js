@@ -8,7 +8,7 @@ export const App = () => {
     <div className="App">
       <Switch>
         <Route path="/" exact component={Timeline} />
-        <Route path="/event/:id" component={Event} />
+        <Route path="/events/:slug" component={Event} />
       </Switch>
     </div>
   );
